@@ -23,4 +23,11 @@ export class TaskService {
     const newId = this.tasks.length >0 ? Math.max(...this.tasks.map(t => t.id)) + 1 : 1;
     this.tasks.push({ id: newId,title, done: false });
   }
+  //Marca ou desmarca uma tarefa como concluída
+  toggleTaskDone(id:number) {
+    const task = this.tasks.find(t => t.id === id);
+    if (task) {
+      task.done = !task.done;
+    }
+  }
 }

@@ -1,0 +1,29 @@
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.task-item:hover {
+  background-color: #f1f1f1;
+}
+
+.task-item.done .task-title {
+  text-decoration: line-through;
+  color: #aaaaaa;
+}
+
+.task-title {
+  flex-grow: 1;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+input[type="checkbox"]{
+  cursor: pointer;
+}

@@ -1,8 +1,8 @@
-<h2>Minhas Tarefas</h2>
+<h2>Minhas tarefas</h2>
 <div class="task-list-container">
-      @for (task of tasks; track task.id){
-        <app-task-item [task]="task"></app-task-item>
-      } @empty {
-      <p>Você ainda não possui tarefas!</p>
+    @for (task of tasks; track task.id) {
+        <app-task-item [task]="task" (taskToggled)="onTaskToggled($event)"></app-task-item>
+    } @empty {
+        <p>Você ainda não possui tarefas!</p>
     }
-    </div>
+</div>
