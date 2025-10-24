@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-task-form',
@@ -7,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrl: './task-form.css',
 })
 export class TaskForm {
+ @Output() taskAdded = new EventEmitter<string>();
 
+
+  addTask(title: string)  {
+    if (title) {
+      this.taskAdded.emit(title);
+    }
+  }
 }

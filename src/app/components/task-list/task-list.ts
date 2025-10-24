@@ -1,6 +1,6 @@
 import { Component,Input } from '@angular/core';
 import { TaskItem } from '../task-item/task-item';
-import { Task } from '../../services/task';
+import { ITask } from '../../services/task';
 
 
 @Component({
@@ -10,5 +10,5 @@ import { Task } from '../../services/task';
   styleUrl: './task-list.css',
 })
 export class TaskList {
-  @Input() tasks: Task[] = [];
+  @Input() tasks: ITask[] = [];
 }

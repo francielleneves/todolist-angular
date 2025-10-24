@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Task } from '../../services/task';
+import { ITask } from '../../services/task';
 
 @Component({
   selector: 'app-task-item',
@@ -8,6 +8,6 @@ import { Task } from '../../services/task';
   styleUrl: './task-item.css',
 })
 export class TaskItem {
-  @Input() task: Task | null = null;
+  @Input() task: ITask | null = null;
 
 }
